@@ -1,0 +1,47 @@
+\documentclass[man]{apa7}
+\usepackage[american]{babel}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\usepackage{csquotes}
+\usepackage{titlepic}
+\usepackage{graphicx}
+\usepackage[style=apa,backend=biber]{biblatex}
+\usepackage{lipsum}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{mybibfile.bib}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textit{Graduation Project}}
+\rhead{\thepage}
+\title{\includegraphics{itülogo.png}\\[3cm]
+Project Title}
+\author{Arif Çakır}
+\affiliation{Student No: 090190355\\
+Submission Date: \today \\
+Course: MAT 4901E \\
+Supervisor: Assoc. Prof. Dr. Atabey Kaygun\\
+\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+
+
+\section{Introduction}
+
+\lipsum[1]
+\section{Word Embedding Techniques}
+\lipsum[0-1]
+\subsection{Term Frequency-Inverse Document Frequency}
+\lipsum[1]
+\subsection{Word2Vec}
+\lipsum[1]
+\subsubsection{Skip-Gram Algorithm}
+\subsubsection{Continuous Bag of Words}
+\subsection{Global Vectors for Word Representation}
+\subsection{Bidirectional Encoder Representations from Transformers}
+\section{2}
+\lipsum[1]
+\end{document}
