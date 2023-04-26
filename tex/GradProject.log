@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.5)  25 APR 2023 14:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.5)  26 APR 2023 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1069,39 +1069,32 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \l__lipsum_b_int=\count460
 
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
-\c@NumberOfAuthors=\count461
-\c@NumberOfSuperscripts=\count462
-
-
-Class apa7 Warning: Deprecated: see documentation for \authorsaffiliations on i
-nput line 24.
-
-\c@NumberOfAffiliations=\count463
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'american'.
+
 (GradProject.aux)
 \openout1 = `GradProject.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1141,16 +1134,16 @@ LaTeX Font Info:    ... okay on input line 26.
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count464
+\scratchcounter=\count461
 \scratchdimen=\dimen289
 \scratchbox=\box65
-\nofMPsegments=\count465
-\nofMParguments=\count466
+\nofMPsegments=\count462
+\nofMParguments=\count463
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count467
+\MPscratchCnt=\count464
 \MPscratchDim=\dimen290
-\MPnumerator=\count468
-\makeMPintoPDFobject=\count469
+\MPnumerator=\count465
+\makeMPintoPDFobject=\count466
 \everyMPtoPDFconversion=\toks32
 )
 (C:\Users\Acer\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
@@ -1163,7 +1156,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 g
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 19.
  (GradProject.out) (GradProject.out)
 \@outlinefile=\write7
 \openout7 = `GradProject.out'.
@@ -1233,28 +1226,17 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'GradProject.bbl' not found.
 
 No file GradProject.bbl.
-Package biblatex Info: Reference section=0 on input line 26.
-Package biblatex Info: Reference segment=0 on input line 26.
-
-Class apa7 Warning: Short title not defined.
-
-
-Class apa7 Warning: Abstract not defined.
-
-Class apa7 Info: Keywords not defined on input line 27.
-<itülogo.png, id=42, 151.767pt x 85.41pt>
+Package biblatex Info: Reference section=0 on input line 19.
+Package biblatex Info: Reference segment=0 on input line 19.
+<itülogo.png, id=74, 151.767pt x 85.41pt>
 File: itülogo.png Graphic file (type png)
 <use itülogo.png>
-Package pdftex.def Info: itülogo.png  used on input line 27.
-(pdftex.def)             Requested size: 151.76662pt x 85.40977pt.
-[1{C:/Users/Acer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+Package pdftex.def Info: itülogo.png  used on input line 24.
+(pdftex.def)             Requested size: 227.64992pt x 128.11465pt.
+[1
 
- <./itülogo.png>]
-File: itülogo.png Graphic file (type png)
-<use itülogo.png>
-Package pdftex.def Info: itülogo.png  used on input line 27.
-(pdftex.def)             Requested size: 151.76662pt x 85.40977pt.
- (GradProject.toc
+{C:/Users/Acer/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./itülogo.pn
+g>] (GradProject.toc
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
 .
 
@@ -1293,29 +1275,36 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-[3] [4] AED endfloat: Processing end Figures and Tables [5] (GradProject.aux)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+AED endfloat: Processing end Figures and Tables [5] (GradProject.aux)
 Package rerunfilecheck Info: File `GradProject.out' has not changed.
-(rerunfilecheck)             Checksum: D8742F192B468EA8D9F97561F73C0EDD;1652.
+(rerunfilecheck)             Checksum: 1E111E13AEC2C539F26827C57A4A10DE;3043.
 Package logreq Info: Writing requests to 'GradProject.run.xml'.
 \openout1 = `GradProject.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32298 strings out of 476334
- 627303 string characters out of 5788444
- 1858382 words of memory out of 5000000
- 52207 multiletter control sequences out of 15000+600000
- 548942 words of font info for 56 fonts, out of 8000000 for 9000
+ 32304 strings out of 476334
+ 627274 string characters out of 5788444
+ 1859382 words of memory out of 5000000
+ 52205 multiletter control sequences out of 15000+600000
+ 563967 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,103p,686b,5231s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,103p,896b,5231s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:
 /Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/
 Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/
 Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Us
-ers/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb>
-Output written on GradProject.pdf (5 pages, 143843 bytes).
+ers/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/User
+s/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb>
+Output written on GradProject.pdf (5 pages, 178919 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 90 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
