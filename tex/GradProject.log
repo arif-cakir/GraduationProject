@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.5)  29 APR 2023 14:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.5)  3 MAY 2023 09:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1275,19 +1275,30 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-[3] [4] [5] [6] [7] AED endfloat: Processing end Figures and Tables [8]
+
+LaTeX Warning: Citation '(' on page 3 undefined on input line 42.
+
+[3] [4] [5] [6] AED endfloat: Processing end Figures and Tables [7]
 (GradProject.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `GradProject.out' has not changed.
 (rerunfilecheck)             Checksum: 9F69010DDD847FFBD57A29C10EC2E6D5;2997.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                GradProject
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'GradProject.run.xml'.
 \openout1 = `GradProject.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32307 strings out of 476334
- 627292 string characters out of 5788444
+ 32494 strings out of 476334
+ 631008 string characters out of 5788444
  1858382 words of memory out of 5000000
- 52205 multiletter control sequences out of 15000+600000
+ 52393 multiletter control sequences out of 15000+600000
  563967 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,103p,1112b,5231s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1297,9 +1308,9 @@ Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/
 Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Us
 ers/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/User
 s/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb>
-Output written on GradProject.pdf (8 pages, 184031 bytes).
+Output written on GradProject.pdf (7 pages, 183243 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
+ 161 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
  154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
