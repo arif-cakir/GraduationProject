@@ -36,14 +36,23 @@
 
 \section{Introduction}
 Language is a fundamental aspect of human communication and one of the most common ways to pass on information and culture throughout history. Due to its nature of encapsulating information, language is studied by linguists throughout the years. Thanks to this scientific foundation, machine learning, and computer science are also advanced upon this topic. Natural Language Processing (NLP) is the subfield of machine learning that studies the processing of human language by computers. One of the most popular NLP techniques in recent years is Word Embedding, which represents words as vectors in semantic space that allows applying mathematical operations on them to analyse. Word Embedding can be used on various subjects such as text classification, translation, and sentiment analysis with promising results. It is aimed in this paper to study several Word Embedding techniques and their applications. The aim is to create a model by applying various Word Embedding models and with the help of this model, describing the relationships and similarities of languages.\\
-The rest of the paper is organised as follows: In Section 2, information about Word Embedding in general and several Word Embedding techniques are provided. Word Embedding techniques touched on in the paper are Term Frequency (TF), Inverse Document Frequency (IDF), Word2Vec, Global Vectors for Word Representation (GloVe), Bidirectional Encoder Representations from Transformers (BERT). This is followed by Section 3 which introduces the dataset {\large \textbf{don't forget the literature name}} by ----. After that, several Word Embedding models are applied to the dataset in Section 4, and the outputs of those models are analysed in Section 5. Finally paper ends with some discussion and a conclusion in Section 6.
+The rest of the paper is organised as follows: In Section 2, information about Word Embedding in general and several Word Embedding techniques are provided. Word Embedding techniques touched on in the paper are Term Frequency (TF), Inverse Document Frequency (IDF), Word2Vec, Global Vectors for Word Representation (GloVe), Bidirectional Encoder Representations from Transformers (BERT). This is followed by Section 3 which introduces the dataset Divine Comedy by Dante Aligheri. After that, several Word Embedding models are applied to the dataset in Section 4, and the outputs of those models are analysed in Section 5. Finally paper ends with some discussion and a conclusion in Section 6.
 
 \section{Word Embedding Techniques}
-Word Embedding is one of the most popular natural language processing techniques due to its vector representation of the words. As Agarwal stated, capturing semantic meaning of the words in a vector of text is the ambition of the word embedding techniques \cite(Agarwal, 2022). With respect to that, some of the most popular word embedding techniques will be studied in this section.
+Word Embedding is one of the most popular natural language processing techniques due to its vector representation of the words. As Agarwal stated, capturing semantic meaning of the words in a vector of text is the ambition of the word embedding techniques \cite(Agarwal, 2022). With respect to that, some of the most popular word embedding techniques will be studied in this section. Those techniques are TF, which counts rarity of words; IDF, which counts rarity of words; Word2Vec, which uses cosine similarity; GloVe, which captures co-occurrence of words; and BERT, family of masked-language models introduced by Google.
 \subsection{Term Frequency-Inverse Document Frequency}
-Term Frequency (TF) is a word embedding technique...
+Term Frequency (TF) is a word embedding technique which counts the occurrence of the words in a document. TF can be shown as following:
+$$TF(i) =   \frac{\log(Frequency(i,j))}{\log(TotalNumber(j))}$$
+\\
+where $Frequency(i,j)$ is the frequency of a word that occurred in a j word document and $TotalNumber(j)$ is the total number of the words in the document.\\
+
+On the other hand, Inverse Document Frequency (IDF) is practically the inverse of the TF. In this method, algorithm relies on the information that gained from the words which are rarely used. IDF can be shown as following:
+$$IDF (i) = \log (\frac{TotalNumber(j)}{Frequency(j,i)})$$
+where $Frequency(i,j)$ is the frequency of a word that occurred in a j word document and $TotalNumber(j)$ is the total number of the words in the document.\\
+
+TF-IDF mainly shows the degree of relevancy of word i in the document j. As Kınık and Güran stated, TF-IDF does not capture semantic relationship between words, and accepts them as independent values \cite(Kınık and Güran,2021). Due to TF-IDF's lack of capturing semantic relationship of the words, TF-IDF mainly used to detect stop words.
 \subsection{Word2Vec}
-Word2Vec is a word embedding model...
+Another word embedding model is Word2Vec, which consists of 2 versions: Skip-Gram Algorithm and Continuous Bag of Words. Word2Vec uses cosine similarity metric to measure similarity of the words. If cosine value of two words is 0, then words do not hold similarity. If cosine value of two words  is 1, then the words are overlapping. 
 \subsubsection{Skip-Gram Algorithm}
 One of the Word2Vec model architectures is Skip-Gram Algorithm...
 \subsubsection{Continuous Bag of Words}
