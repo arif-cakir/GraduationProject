@@ -2,17 +2,16 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
 \contentsline {section}{\numberline {2}Word Embedding Techniques}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Term Frequency - Inverse Document Frequency}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Word2Vec}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Word2Vec}{5}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Skip-Gram Algorithm}{5}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Continuous Bag of Words}{5}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.3}Global Vectors for Word Representation}{6}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Bidirectional Encoder Representations from Transformers}{6}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Dataset}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Information About the Dataset}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Preparation of the Dataset}{6}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Applying Models to the Dataset}{6}{section.4}%
-\contentsline {subsection}{\numberline {4.1}TF-IDF}{6}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Skip-Gram Algorithm}{6}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Continuous Bag of Words}{6}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Analysis and Visualization}{6}{section.5}%
-\contentsline {section}{\numberline {6}Discussion}{6}{section.6}%
+\contentsline {subsubsection}{\numberline {2.2.2}Continuous Bag of Words}{7}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Global Vectors for Word Representation}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Bidirectional Encoder Representations from Transformers}{9}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Dataset}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Information About the Dataset}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Preparation of the Dataset}{9}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Applying Models to the Dataset}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Skip-Gram Algorithm}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Continuous Bag of Words}{9}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Analysis and Visualization}{9}{section.5}%
+\contentsline {section}{\numberline {6}Discussion}{9}{section.6}%

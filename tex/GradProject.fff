@@ -1,0 +1,10 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[htb]
+ \centering
+ \begin{adjustbox}{center}
+   \includegraphics{skip-gram.png}
+ \end{adjustbox}
+ \caption{Comparison}
+ \label{fig5}
+\end{figure*}

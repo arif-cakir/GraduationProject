@@ -5,6 +5,8 @@
 \usepackage{csquotes}
 \usepackage{titlepic}
 \usepackage{graphicx}
+\usepackage{adjustbox}
+
 \usepackage{amsfonts}
 
 \usepackage[style=apa,backend=biber]{biblatex}
@@ -41,45 +43,106 @@ Language is a fundamental aspect of human communication and one of the most comm
 
 The rest of the paper is organised as follows: In Section 2, information about Word Embedding in general and several Word Embedding techniques are provided. Word Embedding techniques touched on in the paper are Term Frequency (TF), Inverse Document Frequency (IDF), Word2Vec, Global Vectors for Word Representation (GloVe), Bidirectional Encoder Representations from Transformers (BERT). This is followed by Section 3 which introduces the dataset Divine Comedy by Dante Aligheri. After that, several Word Embedding models are applied to the dataset in Section 4, and the outputs of those models are analysed in Section 5. Finally paper ends with some discussion and a conclusion in Section 6.
 
+
 \section{Word Embedding Techniques}
 Word Embedding is one of the most popular natural language processing techniques due to its vector representation of the words. As Agarwal stated, capturing semantic meaning of the words in a vector of text is the ambition of the word embedding techniques \cite(Agarwal, 2022). With respect to that, some of the most popular word embedding techniques will be studied in this section. Those techniques are TF, which counts rarity of words; IDF, which counts rarity of words; Word2Vec, which uses cosine similarity; GloVe, which captures co-occurrence of words; and BERT, family of masked-language models introduced by Google.
+
+
 \subsection{Term Frequency - Inverse Document Frequency}
 Term Frequency (TF) is a word embedding technique which counts the occurrence of the words in a document. TF can be shown as following:
-$$TF(i) =   \frac{\log(Frequency(i,j))}{\log(TotalNumber(j))}$$
 
+$$TF(i) =   \frac{\log(Frequency(i,j))}{\log(TotalNumber(j))}.$$
+\\[2\baselineskip]
 where $Frequency(i,j)$ is the frequency of a word that occurred in a j word document and $TotalNumber(j)$ is the total number of the words in the document.
 
 On the other hand, Inverse Document Frequency (IDF) is practically the opposite of the TF method. In this method, algorithm relies on the information that gained from the words which are rarely used. IDF can be shown as following:
-$$IDF (i) = \log (\frac{TotalNumber(j)}{Frequency(j,i)})$$
+
+
+$$IDF (i) = \log (\frac{TotalNumber(j)}{Frequency(j,i)}).$$
+\\[2\baselineskip]
 where $Frequency(i,j)$ is the frequency of a word that occurred in a j word document and $TotalNumber(j)$ is the total number of the words in the document.
 
-TF-IDF mainly shows the degree of relevancy of word i in the document j. As Kınık and Güran stated, TF-IDF does not capture semantic relationship between words, and accepts them as independent values \cite(Kınık and Güran,2021). Due to TF-IDF's lack of capturing semantic relationship of the words, TF-IDF mainly used to detect stop words.
+TF-IDF mainly shows the degree of relevancy of word i in the document j, while the main disadvantage of TF-IDF is it does not grasp contextual relationship between the words. As Kınık and Güran stated, TF-IDF does not capture semantic relationship between words, and accepts them as independent values \cite(Kınık and Güran,2021). Due to TF-IDF's lack of capturing semantic relationship of the words, TF-IDF mainly used to detect stop words.
+
 \subsection{Word2Vec}
-Word2Vec is a word embedding model that was published by researchers led by Tomáš Mikolov at Google in 2013. As stated in Gensim documentations (n.d.), words are embeded in lower-dimensional vector space by Work2Vec. In this vector space, vectors which have similarity of context between them are close to each other while words that have different meanings are distant to each other. After that, Word2Vec uses cosine similarity metric to measure similarity of the words. If cosine value of two words is 0, then words do not hold similarity. If cosine value of two words  is 1, then the words are overlapping. There are two versions of Word2Vec: Skip - Gram and Continuous Bag of Words.
+Word2Vec is a word embedding model that was published by researchers led by Tomáš Mikolov at Google in 2013. As stated in Gensim documentations (n.d.), words are embeded in lower-dimensional vector space by Work2Vec. In this vector space, vectors which have similarity of context between them are close to each other while words that have different meanings are distant to each other. After that, Word2Vec uses cosine similarity metric to measure similarity of the words. If cosine value of two words is 0, then words do not hold similarity. If cosine value of two words  is 1, then the words are overlapping. Due to that, Word2Vec model is mostly used in semantic analysis. On the other hand, the main disadvantage of Word2Vec model is that it can not handle out of vocabulary words well. The words not presenting in training data is called out of vocabulary words. As Chandran stated (2020), a random vector representation is assigned for out of vocabulary words by Word2Vec, and they can be not optimal. There are two neural network based variations of Word2Vec: Skip-Gram and Continuous Bag of Words.
+\\[2\baselineskip]
+
 \subsubsection{Skip-Gram Algorithm}
-One of the Word2Vec model architectures is Skip-Gram Algorithm. Dive Into Deep Learning (n.d) states that a word can be used for generating its surrounding words in skip-gram model. For example, if the sentence "the man loves his son" is taken and "loves" is chosen as the center word, then skip-gram model considers the conditional probability for generating the words. Due to this approach, each word has a two dimensional vector representations in skip-gram model. According to Dive Into Deep Learning, for any word with index $\mathit{i}$ in the directory, $\mathbf{v_\mathit{i}} \in \mathbb{R}^d$ and $\mathbf{u_\mathit{i}} \in \mathbb{R}^d$ are its two vector representations, where $\mathbf{v_\mathit{i}}$ is when the word is used as the "center word" and $\mathbf{u_\mathit{i}}$ is when the word is used as the "context word". If $\mathit{w_o}$ is any context word and $\mathit{w_c}$ is given center word, then conditional probability of generating $\mathit{w_o}$ can be modelled as following:
+One of the Word2Vec model architectures is Skip-Gram Algorithm. Dive Into Deep Learning (n.d) states that a word can be used for generating its surrounding words in skip-gram model. For example, if the sentence "the man loves his son" is taken and "loves" is chosen as the center word, then skip-gram model considers the conditional probability for generating the words. Due to this approach, each word has a two dimensional vector representations in skip-gram model. 
+\\[2\baselineskip]
 
-$$ P(w_o | w_c) = \frac{exp(\mathbf{u_\mathit{o}}^\top \mathbf{v_\mathit{c}})}{\sum_{i \in \mathcal{V}} exp(\mathbf{u_\mathit{i}}^\top \mathbf{v_\mathit{c}})}$$
+\begin{center}
 
+\includegraphics[scale=1]{skip-gram.png}
+
+\textbf{Figure 1:} Skip-Gram model architecture, from Dive Into Deep Learning\\[2\baselineskip]
+
+\end{center}
+
+According to Dive Into Deep Learning, for any word with index $\mathit{i}$ in the directory, $\mathbf{v_\mathit{i}} \in \mathbb{R}^d$ and $\mathbf{u_\mathit{i}} \in \mathbb{R}^d$ are its two vector representations, where $\mathbf{v_\mathit{i}}$ is when the word is used as the "center word" and $\mathbf{u_\mathit{i}}$ is when the word is used as the "context word". If $\mathit{w_o}$ is any context word and $\mathit{w_c}$ is given center word, then conditional probability of generating $\mathit{w_o}$ can be modelled as following:
+
+$$ P(w_o | w_c) = \frac{exp(\mathbf{u_\mathit{o}}^\top \mathbf{v_\mathit{c}})}{\sum_{i \in \mathcal{V}} exp(\mathbf{u_\mathit{i}}^\top \mathbf{v_\mathit{c}})}.$$
+\\[2\baselineskip]
 where $ \mathcal{V}$ is the vocabulary index set. If a text sequence of length $T$ is given and word at time step $t$ is denoted as $\mathit{w}^t$, then likelihood function of skip-gram model for context widow size $m$ is as following:
 
-$$\prod_{t=1}^T \prod_{-m \le j \le m , j \neq 0} P(w^{t+j} | w^t)$$
-
+$$\prod_{t=1}^T \prod_{-m \le j \le m , j \neq 0} P(w^{t+j} | w^t).$$
+\\[2\baselineskip]
 \subsubsection{Continuous Bag of Words}
-The algorithm that does exact opposite of the Skip-Gram Algorithm is called Continuous Bag of Words (CBOW)...
+The other variant of Word2Vec model is continuous bag of words (CBOW). The main difference between skip-gram and CBOW is instead of generating surrounding words respect to center word, CBOW generates center word with the help of surrounding words. If the same example "the man loves his son" is taken for CBOW model, instead of generating surrounding words based on center word "loves", the model generates center word "loves" from its surroundings.
+\\[2\baselineskip]
+
+\begin{center}
+\includegraphics[scale=1]{cbow.png}
+
+\textbf{Figure 2:} CBOW model architecture, from Dive Into Deep Learning\\[2\baselineskip]
+
+\end{center}
+
+According to Dive Into Deep Learning (n.d.), in order to calculate conditional probability, context word vectors are averaged because there are multiple words. For any word with index $i$ in the dictionary, $\mathbf{v_\mathit{i}} \in \mathbb{R}^d$ is the context word while $\mathbf{u_\mathit{i}} \in \mathbb{R}^d$  is the center word. It can be seen that meanings are switched compared to skip-gram model. While $w_o,...,w_{o_{2m}}$ the conditional probability of generating center word $w_c$ can be modelled as following:
+
+$$ P(w_c|w_o,...,w_{o_{2m}}) = \frac{exp(\frac{1}{2m}u_c^\top(\mathbf{v}_{o_1}+...+\mathbf{v}_{o_{2m}}))}{\sum_{i \in \mathcal{V}} exp(\frac{1}{2m}u_c^\top(\mathbf{v}_{o_1}+...+\mathbf{v}_{o_{2m}}))}.$$
+\\[2\baselineskip]
+For simplicity, $\mathcal{W}_o = \{ w_o,...,w_{o_{2m}}\}$ and $\bar{\mathbf{v}}_o = (\mathbf{v}_{o_1}+...+\mathbf{v}_{o_{2m}})/(2m)$. Then equation given above is simplified as following:
+
+$$ P(w_c | \mathcal{W}_o) = \frac{exp(u_c^\top \bar{\mathbf{v}}_o)}{\sum_{i \in \mathcal{V}} exp(u_i^\top \bar{\mathbf{v}}_o)}.$$  
+\\[2\baselineskip]
+Furthermore, Dive Into Deep Learning (n.d.) states that if the length of a text sequence is $\mathit{T}$ and the word at time $t$ is $w^{(t)}$, then for context window of size $m$ the likelihood function of CBOW model is
+$$\prod_{t=1}^T P(w^{(t)}| w^{(t-m)},..., w^{(t-1)},w^{(t+1)},...,w^{(t+m)}).$$
+\\[2\baselineskip]   
 \subsection{Global Vectors for Word Representation}
-Global Vectors for Word Representation (GloVe)
+Global Vectors for Word Representation (GloVe) is an unsupervised learning algorithm that developed by scientist led by Jeffery Pennington in Stanford University. Unlike Word2Vec, GloVe captures global contextual information of words by calculating a global word-word co-occurrence matrix. According to Agarwal, only local context of words is captured by Word2Vec (Agarwal, 2022). On the other hand, entire corpus is considered by GloVe and a large matrix that can capture co-occurrence of words within the corpus is created.
+
+Agarwal continues by GloVe has the combination of the advantages of two-word vector learning methods: matrix factorization like latent semantic analysis (LSA) and local context window method (like Skip-Gram or CBOW). LSA is the technique that analyses the relationship between a set of documents and the terms they contain by using singular value decomposition. 
+\\[2\baselineskip]
+
+\begin{center}
+\includegraphics[scale=3]{city_zip.jpg}
+
+\textbf{Figure 2:} GloVe vectors capturing relation between city and zip code, from Stanford\\[2\baselineskip]
+
+\end{center}
+
+
+Furthermore, the GloVe method's computational time is reduced by a rather simpler least square error function. Also, GloVe handles out of vocabulary words better than Word2Vec. Due to that, GloVe performs better in word analogy and named entity recognition tasks. 
+
 \subsection{Bidirectional Encoder Representations from Transformers}
 Created by researchers at Google in 2018, Bidirectional Encoder Representations from Transformers (BERT) is a family of masked-language models...
+
 \section{Dataset}
+
 \subsection{Information About the Dataset}
+
 \subsection{Preparation of the Dataset}
+
 \section{Applying Models to the Dataset}
-\subsection{TF-IDF}
 
 \subsection{Skip-Gram Algorithm}
+
 \subsection{Continuous Bag of Words}
 
 \section{Analysis and Visualization}
+
 \section{Discussion}
+
 \end{document}
