@@ -87,7 +87,21 @@ $$ P(w_o | w_c) = \frac{exp(\mathbf{u_\mathit{o}}^\top \mathbf{v_\mathit{c}})}{\
 where $ \mathcal{V}$ is the vocabulary index set. If a text sequence of length $T$ is given and word at time step $t$ is denoted as $\mathit{w}^t$, then likelihood function of skip-gram model for context widow size $m$ is as following:
 
 $$\prod_{t=1}^T \prod_{-m \le j \le m , j \neq 0} P(w^{t+j} | w^t).$$
-\\[2\baselineskip]
+
+The skip-gram model parameters are center word and context word vector for each word in the corpus. In order to train skip-gram model, given loss function must be minimized:
+
+$$ -\sum_{t=1}^T \sum_{-m \le j \le m, j \neq 0} logP(w^{(t+j)} | w^{(t)}).$$
+
+Moreover, while using (stochastic) gradient descent to minimize the loss function, gradients of log conditional probability must be obtained. For center word $w_c$ and context word $w_o$, log conditional probability is
+
+$$ logP(w_o|w_c) = \mathbf{u}_o^\top \mathbf{v}_c - log(\sum_{i \in \mathcal{V}} exp(\mathbf{u}_i^\top \mathbf{v}_c)).$$
+
+And the gradient of center word $\mathbf{v}_c$ can be obtained as
+
+$$ \frac{\partial P(w_o | w_c)}{\partial \mathbf{v}_c} = \mathbf{u}_o - \sum_{j \in \mathcal{V}} P(w_o|w_c)\mathbf{u}_j.$$
+
+After this calculations, Dive Into Deep Learning states that we obtain center word vector $\mathbf{v}_i$ and context word vector $\mathbf{u}_i$ for index $i$ in the dictionary.
+
 \subsubsection{Continuous Bag of Words}
 The other variant of Word2Vec model is continuous bag of words (CBOW). The main difference between skip-gram and CBOW is instead of generating surrounding words respect to center word, CBOW generates center word with the help of surrounding words. If the same example "the man loves his son" is taken for CBOW model, instead of generating surrounding words based on center word "loves", the model generates center word "loves" from its surroundings.
 \\[2\baselineskip]
@@ -109,25 +123,52 @@ $$ P(w_c | \mathcal{W}_o) = \frac{exp(u_c^\top \bar{\mathbf{v}}_o)}{\sum_{i \in 
 \\[2\baselineskip]
 Furthermore, Dive Into Deep Learning (n.d.) states that if the length of a text sequence is $\mathit{T}$ and the word at time $t$ is $w^{(t)}$, then for context window of size $m$ the likelihood function of CBOW model is
 $$\prod_{t=1}^T P(w^{(t)}| w^{(t-m)},..., w^{(t-1)},w^{(t+1)},...,w^{(t+m)}).$$
-\\[2\baselineskip]   
-\subsection{Global Vectors for Word Representation}
-Global Vectors for Word Representation (GloVe) is an unsupervised learning algorithm that developed by scientist led by Jeffery Pennington in Stanford University. Unlike Word2Vec, GloVe captures global contextual information of words by calculating a global word-word co-occurrence matrix. According to Agarwal, only local context of words is captured by Word2Vec (Agarwal, 2022). On the other hand, entire corpus is considered by GloVe and a large matrix that can capture co-occurrence of words within the corpus is created.
 
-Agarwal continues by GloVe has the combination of the advantages of two-word vector learning methods: matrix factorization like latent semantic analysis (LSA) and local context window method (like Skip-Gram or CBOW). LSA is the technique that analyses the relationship between a set of documents and the terms they contain by using singular value decomposition. 
+Due to CBOW and skip-gram models being similar, training them also almost same. According to Dive Into Deep Learning, to train CBOW model, maximum likelihood estimation of CBOW model is equal to minimization of following loss function
+
+$$ - \sum_{t=1}^T logP(w^{(t)} | w^{t-m)} ,..., w^{(t-1)} ,w^{(t+1)}, ...,w^{(t+m)}).$$  
+
+where
+
+$$ logP(w_c | \mathcal{W}_o) = \mathbf{u}_c^\top \bar{\mathbf{v}}_o - log(\sum_{i \in \mathcal{V}} exp(\mathbf{u}_i^\top \bar{\mathbf{v}}_o)).$$
+
+Through differentiation, gradient with respect to any cotext word vector $\mathbf{v}_{o_i}$ can be obtained as
+
+$$ \frac{\partial log P(w_c| \mathcal{W}_o )}{\partial \mathbf{v}_{o_i}} = \frac{1}{2m}(\mathbf{u}_c - \sum_{j \in \mathcal{V}} P(w_j| \mathcal{W}_o \mathbf{u}_j)). $$
+
+Furthermore, gradients of other vectors can be obtained with the same way.
+
+\subsection{Global Vectors for Word Representation}
+Global Vectors for Word Representation (GloVe) is an unsupervised learning algorithm that developed by scientist led by Jeffery Pennington in Stanford University. Unlike Word2Vec, GloVe captures global contextual information of words by calculating a global word-word co-occurrence matrix. For example, in a large corpus, the word "liquid" more likely to co-occur with "water" than "ice", but word "solid" more likely to co-occur with "ice" than "steam". According to Agarwal, only local context of words is captured by Word2Vec (Agarwal, 2022). On the other hand, entire corpus is considered by GloVe and a large matrix that can capture co-occurrence of words within the corpus is created.
 \\[2\baselineskip]
 
 \begin{center}
 \includegraphics[scale=3]{city_zip.jpg}
 
-\textbf{Figure 2:} GloVe vectors capturing relation between city and zip code, from Stanford\\[2\baselineskip]
+\textbf{Figure 3:} GloVe vectors capturing relation between city and zip code, from Stanford University\\[2\baselineskip]
 
 \end{center}
 
+Agarwal continues by GloVe has the combination of the advantages of two-word vector learning methods: matrix factorization like latent semantic analysis (LSA) and local context window method (like Skip-Gram or CBOW). LSA is the technique that analyses the relationship between a set of documents and the terms they contain by using singular value decomposition. 
 
-Furthermore, the GloVe method's computational time is reduced by a rather simpler least square error function. Also, GloVe handles out of vocabulary words better than Word2Vec. Due to that, GloVe performs better in word analogy and named entity recognition tasks. 
+Furthermore, the GloVe method's computational time is reduced by a rather simpler least square error function. As it is stated in Dive Into Deep Learning, Glove makes three changes to skip-gram model square loss (n.d.). where vectors $\mathbf{v_\mathit{i}} \in \mathbb{R}^d$ and $\mathbf{u_\mathit{i}} \in \mathbb{R}^d$ keep same representations as skip-gram model, those there changes are as following:
+
+1. Using variables $p'_{ij} = x_{ij}$ and $q'_{ij} = exp(\mathbf{u}_j^\top \mathbf{v}_i)$ that are not probabilistic distributions. After taking their logarithms, the squared loss term becomes $(log(p'_{ij})-log(q'_{ij}))^2 = (\mathbf{u}_j^\top \mathbf{v}_i - log (x_{ij}))^2$.
+
+2. For each word $w_i$, adding two scalar model parameters: the center word bias $b_i$ and context word bias $c_i$.
+
+3. Replacing the weight of each loss term $h(x_{ij}$ where $h(x)$ is increasing in the interval of $[0,1]$.
+ 
+Therefore, loss function of GloVe is:
+
+$$ \sum_{i \in \mathcal{V}} \sum_{j \in \mathcal{V}} h(x_{ij})(u_j^\top \mathbf{v}_i + b_i +c_j -log(x_{ij}))^2$$
+
+Where suggested choice for $h(x)$ is: if $x < c$ , then $h(x) = (x/c)^\alpha$, else $h(x) = 1$. 
+
+Finally, when compared to Word2Vec GloVe handles out of vocabulary words better. Due to that, GloVe performs better in word analogy and named entity recognition tasks. 
 
 \subsection{Bidirectional Encoder Representations from Transformers}
-Created by researchers at Google in 2018, Bidirectional Encoder Representations from Transformers (BERT) is a family of masked-language models...
+Created by researchers at Google in 2018, Bidirectional Encoder Representations from Transformers (BERT) is a family of masked-language models. 
 
 \section{Dataset}
 
