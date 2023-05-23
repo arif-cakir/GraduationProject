@@ -73,7 +73,7 @@ TF-IDF mainly shows the degree of relevancy of word i in the document j, while t
 Word2Vec is a word embedding model that was published by researchers led by Tomáš Mikolov at Google in 2013. As stated in Gensim documentations (n.d.), words are embeded in lower-dimensional vector space by Work2Vec. In this vector space, vectors which have similarity of context between them are close to each other while words that have different meanings are distant to each other. After that, Word2Vec uses cosine similarity metric to measure similarity of the words. If cosine value of two words is 0, then words do not hold similarity. If cosine value of two words  is 1, then the words are overlapping. Due to that, Word2Vec model is mostly used in semantic analysis. On the other hand, the main disadvantage of Word2Vec model is that it can not handle out of vocabulary words well. The words not presenting in training data is called out of vocabulary words. As Chandran stated (2020), a random vector representation is assigned for out of vocabulary words by Word2Vec, and they can be not optimal. There are two neural network based variations of Word2Vec: Skip-Gram and Continuous Bag of Words.
 
 \subsubsection{Skip-Gram Algorithm}
-One of the Word2Vec model architectures is Skip-Gram Algorithm. Dive Into Deep Learning (n.d) states that a word can be used for generating its surrounding words in skip-gram model. For example, if the sentence "the man loves his son" is taken and "loves" is chosen as the center word, then skip-gram model considers the conditional probability for generating the words. Due to this approach, each word has a two dimensional vector representations in skip-gram model. 
+One of the Word2Vec model architectures is Skip-Gram Algorithm. Dive Into Deep Learning (n.d) states that a word can be used for generating its surrounding words in skip-gram model. For example, if the sentence "the man loves his son" is taken and "loves" is chosen as the center word, then skip-gram model considers the conditional probability for generating the words. This architecture can be seen in \textbf{Figure 1}. Due to this approach, each word has a two dimensional vector representations in skip-gram model. 
 
 \begin{center}
 
@@ -114,7 +114,7 @@ And the gradient of center word $\mathbf{v}_c$ can be obtained as
 After this calculations, Dive Into Deep Learning states that we obtain center word vector $\mathbf{v}_i$ and context word vector $\mathbf{u}_i$ for index $i$ in the dictionary.
 
 \subsubsection{Continuous Bag of Words}
-The other variant of Word2Vec model is continuous bag of words (CBOW). The main difference between skip-gram and CBOW is instead of generating surrounding words respect to center word, CBOW generates center word with the help of surrounding words. If the same example "the man loves his son" is taken for CBOW model, instead of generating surrounding words based on center word "loves", the model generates center word "loves" from its surroundings.
+The other variant of Word2Vec model is continuous bag of words (CBOW). The main difference between skip-gram and CBOW is instead of generating surrounding words respect to center word, CBOW generates center word with the help of surrounding words. If the same example "the man loves his son" is taken for CBOW model, instead of generating surrounding words based on center word "loves", the model generates center word "loves" from its surroundings. This architecture can be seen in \textbf{Figure 2}.
 \\[2\baselineskip]
 
 \begin{center}
@@ -202,7 +202,22 @@ On the other hand, context-sensitive function $f(x,c(x))$ is dependent to both t
 
 When it comes to task-specific and task-agnostic representation, task-specific representation is when a model is optimized to a specific task, while a task-agnostic representation is when model is independent from a task based architecture. For instance, ELMo is an task-specific solution while it is not necessary to create specific architecture for each NLP task. The Generative Pre-Training  (GPT) model is a context-sensitive, task-agnostic representation. However, according to Dive Into Deep Learning, GPT only look left to right because of autoregressive nature of natural languages. For example, the sentences "A crane is flying." and "A crane is crashed." is taken, because of word "crane" being sensitive to context in its left, GPT will return the same representation of "crane".
 
-Both ELMo and GPT fails in some cases. According to Dive Into Deep Learning, combination of both representations BERT, encodes context bidirectionally and requires minimal architecture changes for a wide range of natural language processing tasks.
+Both ELMo and GPT fails in some cases. According to Dive Into Deep Learning, combination of both representations BERT, encodes context bidirectionally and requires minimal architecture changes for a wide range of natural language processing tasks. Differences between ELMo, GPT and BERT can be seen in \textbf{Figure 4}.
+\\[2\baselineskip]
+
+\begin{center}
+\includegraphics[scale=0.6]{elmo-gpt-bert.png}
+
+\textbf{Figure 4:} Difference between ELMo, GPT, and BERT, from Dive Into Deep Learning\\[2\baselineskip]
+\end{center}
+
+As Dive Into Deep Learning states, by using pretrained transformer encoder, any token based on its bidirectional context can be represented by BERT. Furthermore, BERT is similar to GPT in two aspect during supervised learning of downstream tasks.
+
+1. BERT representations will be fed into an added output layer with minimal changes to the model architecture. 
+
+2. while the additional output layer will be trained from scratch, all the parameters of the pretrained transformer encoder are fine-tuned.
+
+Finally, Agarwal states that there are two variants of BERT: BERT-Base and BERT-Large. While BERT-Base has 110 million parameters, BERT-Large has 340 million parameters.
 
 \section{Application}
 
@@ -214,9 +229,11 @@ The Divine Comedy is an epic poem written by Italian poet Dante Alighieri in the
 
 The Divine Comedy is chosen for this paper due to several reasons. Firstly and most significantly, The Divine Comedy is a voluminous work that consists of wide range of characters, concepts, names. Due to its rich vocabulary, it provides great spectrum of words to use for model. Secondly, The Divine Comedy has a great cultural significance for both European and world literature. Due to this importance, it has countless adaptations in various languages and finding this adaptations is easier compared to other works of literature. Finally, The Divine Comedy explores fundamental aspects of human nature like sin, love, redemption. The concepts that explored in The Divine Comedy are mostly universal and due to that appear in different languages. Thanks to that, working on The Divine Comedy can show how a language reflects universal concepts.
 
-For this paper, versions of The Divine Comedy in different languages are used and the data is taken from \href{https://www.gutenberg.org/}{Project Gutenberg}. Six different versions of The Divine Comedy in different languages is used and those languages are \href{https://www.gutenberg.org/cache/epub/39181/pg39181-images.html}{Dutch}, \href{https://www.gutenberg.org/cache/epub/1004/pg1004-images.html}{English}, \href{https://www.gutenberg.org/cache/epub/12546/pg12546.html}{Finnish}, \href{https://www.gutenberg.org/cache/epub/8085/pg8085.html}{German}, \href{https://www.gutenberg.org/cache/epub/1000/pg1000-images.html}{Italian}, and \href{https://www.gutenberg.org/cache/epub/57303/pg57303-images.html}{Spanish}.
+For this paper, versions of The Divine Comedy in different languages are used and the data is taken from \href{https://www.gutenberg.org/}{Project Gutenberg}. Six different versions of The Divine Comedy in different languages are used and those languages are \href{https://www.gutenberg.org/cache/epub/39181/pg39181-images.html}{Dutch}, \href{https://www.gutenberg.org/cache/epub/1004/pg1004-images.html}{English}, \href{https://www.gutenberg.org/cache/epub/12546/pg12546.html}{Finnish}, \href{https://www.gutenberg.org/cache/epub/8085/pg8085.html}{German}, \href{https://www.gutenberg.org/cache/epub/1000/pg1000-images.html}{Italian}, and \href{https://www.gutenberg.org/cache/epub/57303/pg57303-images.html}{Spanish}.
 
 \subsection{Preparation of the Dataset}
+
+
 
 \subsection{Skip-Gram Algorithm}
 

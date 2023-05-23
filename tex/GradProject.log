@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.5)  23 MAY 2023 23:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.5)  24 MAY 2023 01:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1386,8 +1386,18 @@ File: city_zip.jpg Graphic file (type jpg)
 <use city_zip.jpg>
 Package pdftex.def Info: city_zip.jpg  used on input line 170.
 (pdftex.def)             Requested size: 216.80942pt x 169.11136pt.
- [9] [10 <./city_zip.jpg>] [11] [12]
-AED endfloat: Processing end Figures and Tables [13] (GradProject.aux)
+ [9] [10 <./city_zip.jpg>] [11]
+<elmo-gpt-bert.png, id=167, 575.14874pt x 369.38pt>
+File: elmo-gpt-bert.png Graphic file (type png)
+<use elmo-gpt-bert.png>
+Package pdftex.def Info: elmo-gpt-bert.png  used on input line 209.
+(pdftex.def)             Requested size: 345.0919pt x 221.6297pt.
+ [12 <./elmo-gpt-bert.png>]
+AED endfloat: Processing end Figures and Tables
+Underfull \vbox (badness 1406) has occurred while \output is active []
+
+ [13]
+[14] (GradProject.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1403,10 +1413,10 @@ Package logreq Info: Writing requests to 'GradProject.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33777 strings out of 476334
- 654456 string characters out of 5788444
+ 33785 strings out of 476334
+ 654613 string characters out of 5788444
  1860382 words of memory out of 5000000
- 53604 multiletter control sequences out of 15000+600000
+ 53610 multiletter control sequences out of 15000+600000
  577862 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,113p,1145b,5366s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1430,9 +1440,9 @@ Programs/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Users/Acer/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Acer/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Acer/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on GradProject.pdf (13 pages, 450359 bytes).
+Output written on GradProject.pdf (14 pages, 481853 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 275 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 
