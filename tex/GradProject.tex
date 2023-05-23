@@ -6,7 +6,12 @@
 \usepackage{titlepic}
 \usepackage{graphicx}
 \usepackage{adjustbox}
-
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor = blue,      
+    urlcolor=blue
+    }
 \usepackage{amsfonts}
 
 \usepackage[style=apa,backend=biber]{biblatex}
@@ -40,7 +45,7 @@
 \section{Introduction}
 Language is a fundamental aspect of human communication and one of the most common ways to pass on information and culture throughout history. Due to its nature of encapsulating information, language is studied by linguists throughout the years. Thanks to this scientific foundation, machine learning, and computer science are also advanced upon this topic. Natural Language Processing (NLP) is the subfield of machine learning that studies the processing of human language by computers. One of the most popular NLP techniques in recent years is Word Embedding, which represents words as vectors in semantic space that allows applying mathematical operations on them to analyse. Word Embedding can be used on various subjects such as text classification, translation, and sentiment analysis with promising results. It is aimed in this paper to study several Word Embedding techniques and their applications. The aim is to create a model by applying various Word Embedding models and with the help of this model, describing the relationships and similarities of languages.
 
-The rest of the paper is organised as follows: In Section 2, information about Word Embedding in general and several Word Embedding techniques are provided. Word Embedding techniques touched on in the paper are Term Frequency (TF), Inverse Document Frequency (IDF), Word2Vec, Global Vectors for Word Representation (GloVe), Bidirectional Encoder Representations from Transformers (BERT). This is followed by Section 3 which introduces the dataset Divine Comedy by Dante Aligheri. After that, several Word Embedding models are applied to the dataset in Section 4, and the outputs of those models are analysed in Section 5. Finally paper ends with some discussion and a conclusion in Section 6.
+The rest of the paper is organised as follows: In Section 2, information about Word Embedding in general and several Word Embedding techniques are provided. Word Embedding techniques touched on in the paper are Term Frequency (TF), Inverse Document Frequency (IDF), Word2Vec, Global Vectors for Word Representation (GloVe), Bidirectional Encoder Representations from Transformers (BERT). This is followed by Section 3 which introduces the dataset The Divine Comedy by Dante Alighieri. After that, several Word Embedding models are applied to the dataset in Section 4, and the outputs of those models are analysed in Section 5. Finally paper ends with some discussion and a conclusion in Section 6.
 
 \section{Word Embedding Techniques}
 Word Embedding is one of the most popular natural language processing techniques due to its vector representation of the words. As Agarwal stated, capturing semantic meaning of the words in a vector of text is the ambition of the word embedding techniques \cite(Agarwal, 2022). With respect to that, some of the most popular word embedding techniques will be studied in this section. Those techniques are TF, which counts rarity of words; IDF, which counts rarity of words; Word2Vec, which uses cosine similarity; GloVe, which captures co-occurrence of words; and BERT, family of masked-language models introduced by Google.
@@ -197,13 +202,21 @@ On the other hand, context-sensitive function $f(x,c(x))$ is dependent to both t
 
 When it comes to task-specific and task-agnostic representation, task-specific representation is when a model is optimized to a specific task, while a task-agnostic representation is when model is independent from a task based architecture. For instance, ELMo is an task-specific solution while it is not necessary to create specific architecture for each NLP task. The Generative Pre-Training  (GPT) model is a context-sensitive, task-agnostic representation. However, according to Dive Into Deep Learning, GPT only look left to right because of autoregressive nature of natural languages. For example, the sentences "A crane is flying." and "A crane is crashed." is taken, because of word "crane" being sensitive to context in its left, GPT will return the same representation of "crane".
 
-\section{Dataset}
+Both ELMo and GPT fails in some cases. According to Dive Into Deep Learning, combination of both representations BERT, encodes context bidirectionally and requires minimal architecture changes for a wide range of natural language processing tasks.
+
+\section{Application}
+
+In this section, skip-gram and continuous bag of words models are applied on The Divine Comedy by Dante Alighieri. Before applying models on The Divine Comedy, brief information about dataset is given and then dataset is prepared for the models.
 
 \subsection{Information About the Dataset}
 
-\subsection{Preparation of the Dataset}
+The Divine Comedy is an epic poem written by Italian poet Dante Alighieri in the 14th century. While it is considered one of the greatest works of literature, the poem is divided into three parts. Those three parts represent different realms of afterlife and consists of Inferno (Hell), Purgatorio (Purgatory), and Paradiso (Paradise).
 
-\section{Applying Models to the Dataset}
+The Divine Comedy is chosen for this paper due to several reasons. Firstly and most significantly, The Divine Comedy is a voluminous work that consists of wide range of characters, concepts, names. Due to its rich vocabulary, it provides great spectrum of words to use for model. Secondly, The Divine Comedy has a great cultural significance for both European and world literature. Due to this importance, it has countless adaptations in various languages and finding this adaptations is easier compared to other works of literature. Finally, The Divine Comedy explores fundamental aspects of human nature like sin, love, redemption. The concepts that explored in The Divine Comedy are mostly universal and due to that appear in different languages. Thanks to that, working on The Divine Comedy can show how a language reflects universal concepts.
+
+For this paper, versions of The Divine Comedy in different languages are used and the data is taken from \href{https://www.gutenberg.org/}{Project Gutenberg}. Six different versions of The Divine Comedy in different languages is used and those languages are \href{https://www.gutenberg.org/cache/epub/39181/pg39181-images.html}{Dutch}, \href{https://www.gutenberg.org/cache/epub/1004/pg1004-images.html}{English}, \href{https://www.gutenberg.org/cache/epub/12546/pg12546.html}{Finnish}, \href{https://www.gutenberg.org/cache/epub/8085/pg8085.html}{German}, \href{https://www.gutenberg.org/cache/epub/1000/pg1000-images.html}{Italian}, and \href{https://www.gutenberg.org/cache/epub/57303/pg57303-images.html}{Spanish}.
+
+\subsection{Preparation of the Dataset}
 
 \subsection{Skip-Gram Algorithm}
 
