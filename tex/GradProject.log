@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.5)  23 MAY 2023 15:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.5)  23 MAY 2023 18:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1345,40 +1345,47 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
 
-LaTeX Warning: Citation '(' on page 3 undefined on input line 48.
+LaTeX Warning: Citation '(' on page 3 undefined on input line 46.
 
 [3]
 
 LaTeX Warning: Citation '(' on page 4 undefined on input line 65.
 
-[4]
-<skip-gram.png, id=113, 280.04625pt x 183.68625pt>
+
+Underfull \vbox (badness 2521) has occurred while \output is active []
+
+ [4]
+<skip-gram.png, id=115, 280.04625pt x 183.68625pt>
 File: skip-gram.png Graphic file (type png)
 <use skip-gram.png>
-Package pdftex.def Info: skip-gram.png  used on input line 77.
+Package pdftex.def Info: skip-gram.png  used on input line 75.
 (pdftex.def)             Requested size: 280.04555pt x 183.68578pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-[6 <./skip-gram.png>]
-<cbow.png, id=133, 280.04625pt x 183.68625pt>
+Underfull \vbox (badness 1642) has occurred while \output is active []
+
+ [6 <./skip-gram.png>]
+<cbow.png, id=137, 280.04625pt x 183.68625pt>
 File: cbow.png Graphic file (type png)
 <use cbow.png>
-Package pdftex.def Info: cbow.png  used on input line 110.
+Package pdftex.def Info: cbow.png  used on input line 116.
 (pdftex.def)             Requested size: 280.04555pt x 183.68578pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-[8 <./cbow.png>]
-<city_zip.jpg, id=146, 72.27pt x 56.3706pt>
+Underfull \vbox (badness 1642) has occurred while \output is active []
+
+ [8 <./cbow.png>]
+<city_zip.jpg, id=154, 72.27pt x 56.3706pt>
 File: city_zip.jpg Graphic file (type jpg)
 <use city_zip.jpg>
-Package pdftex.def Info: city_zip.jpg  used on input line 146.
+Package pdftex.def Info: city_zip.jpg  used on input line 165.
 (pdftex.def)             Requested size: 216.80942pt x 169.11136pt.
- [9] [10 <./city_zip.jpg>]
-AED endfloat: Processing end Figures and Tables [11] (GradProject.aux)
+ [9] [10 <./city_zip.jpg>] [11]
+AED endfloat: Processing end Figures and Tables [12] (GradProject.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1394,9 +1401,9 @@ Package logreq Info: Writing requests to 'GradProject.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33762 strings out of 476334
- 654269 string characters out of 5788444
- 1858382 words of memory out of 5000000
+ 33776 strings out of 476334
+ 654436 string characters out of 5788444
+ 1859382 words of memory out of 5000000
  53603 multiletter control sequences out of 15000+600000
  577862 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1421,9 +1428,9 @@ Programs/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Users/Acer/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Acer/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Acer/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on GradProject.pdf (11 pages, 442918 bytes).
+Output written on GradProject.pdf (12 pages, 447517 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
+ 262 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
