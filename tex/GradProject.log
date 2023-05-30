@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.5)  24 MAY 2023 12:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.4.5)  31 MAY 2023 01:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1328,7 +1328,7 @@ Package biblatex Info: ... file 'GradProject.bbl' not found.
 No file GradProject.bbl.
 Package biblatex Info: Reference section=0 on input line 29.
 Package biblatex Info: Reference segment=0 on input line 29.
-<itülogo.png, id=66, 151.767pt x 85.41pt>
+<itülogo.png, id=70, 151.767pt x 85.41pt>
 File: itülogo.png Graphic file (type png)
 <use itülogo.png>
 Package pdftex.def Info: itülogo.png  used on input line 34.
@@ -1384,71 +1384,77 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-
-LaTeX Warning: Citation '(' on page 3 undefined on input line 52.
-
 [3]
+<autoencoding.jpg, id=107, 831.105pt x 659.46375pt>
+File: autoencoding.jpg Graphic file (type jpg)
+<use autoencoding.jpg>
+Package pdftex.def Info: autoencoding.jpg  used on input line 57.
+(pdftex.def)             Requested size: 332.43611pt x 263.78082pt.
 
-LaTeX Warning: Citation '(' on page 4 undefined on input line 71.
 
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 65.
 
-Underfull \vbox (badness 2521) has occurred while \output is active []
-
- [4]
-<skip-gram.png, id=110, 280.04625pt x 183.68625pt>
+[4 <./autoencoding.jpg>]
+<skip-gram.png, id=113, 280.04625pt x 183.68625pt>
 File: skip-gram.png Graphic file (type png)
 <use skip-gram.png>
-Package pdftex.def Info: skip-gram.png  used on input line 81.
+Package pdftex.def Info: skip-gram.png  used on input line 71.
 (pdftex.def)             Requested size: 280.04555pt x 183.68578pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
-Underfull \vbox (badness 1642) has occurred while \output is active []
-
- [6 <./skip-gram.png>]
+ [5 <./skip-gram.png>]
 <cbow.png, id=132, 280.04625pt x 183.68625pt>
 File: cbow.png Graphic file (type png)
 <use cbow.png>
-Package pdftex.def Info: cbow.png  used on input line 122.
+Package pdftex.def Info: cbow.png  used on input line 113.
 (pdftex.def)             Requested size: 280.04555pt x 183.68578pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
+ [6]
 Underfull \vbox (badness 1642) has occurred while \output is active []
 
- [8 <./cbow.png>]
-<city_zip.jpg, id=149, 72.27pt x 56.3706pt>
+ [7 <./cbow.png>]
+
+LaTeX Warning: Citation '(' on page 8 undefined on input line 158.
+
+[8]
+
+LaTeX Warning: Citation '(' on page 9 undefined on input line 177.
+
+[9]
+<city_zip.jpg, id=163, 72.27pt x 56.3706pt>
 File: city_zip.jpg Graphic file (type jpg)
 <use city_zip.jpg>
-Package pdftex.def Info: city_zip.jpg  used on input line 171.
+Package pdftex.def Info: city_zip.jpg  used on input line 188.
 (pdftex.def)             Requested size: 216.80942pt x 169.11136pt.
- [9] [10 <./city_zip.jpg>] [11]
-<elmo-gpt-bert.png, id=167, 575.14874pt x 369.38pt>
+ [10 <./city_zip.jpg>] [11]
+<elmo-gpt-bert.png, id=173, 575.14874pt x 369.38pt>
 File: elmo-gpt-bert.png Graphic file (type png)
 <use elmo-gpt-bert.png>
-Package pdftex.def Info: elmo-gpt-bert.png  used on input line 210.
+Package pdftex.def Info: elmo-gpt-bert.png  used on input line 227.
 (pdftex.def)             Requested size: 345.0919pt x 221.6297pt.
- [12 <./elmo-gpt-bert.png>]
-Underfull \vbox (badness 1406) has occurred while \output is active []
 
- [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <./elmo-gpt-bert.png>]
 
 pdfTeX warning: pdflatex (file ./languages.pdf): PDF inclusion: found PDF versi
 on <1.7>, but at most version <1.5> allowed
-<languages.pdf, id=185, 614.26486pt x 129.84511pt>
+<languages.pdf, id=191, 614.26486pt x 129.84511pt>
 File: languages.pdf Graphic file (type pdf)
 <use languages.pdf>
-Package pdftex.def Info: languages.pdf  used on input line 241.
+Package pdftex.def Info: languages.pdf  used on input line 258.
 (pdftex.def)             Requested size: 469.75502pt x 99.29947pt.
-AED endfloat: Processing end Figures and Tables [14 <./languages.pdf>]
+[14 <./languages.pdf>] AED endfloat: Processing end Figures and Tables [15]
 (GradProject.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `GradProject.out' has not changed.
-(rerunfilecheck)             Checksum: 0BAEB2DAA81C1EBBCB6D0E18C2AF955B;2739.
+(rerunfilecheck)             Checksum: 8774696BDFFE779738542C09681EC4DF;2843.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                GradProject
@@ -1459,10 +1465,10 @@ Package logreq Info: Writing requests to 'GradProject.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34526 strings out of 476334
- 668457 string characters out of 5788444
- 1859382 words of memory out of 5000000
- 54328 multiletter control sequences out of 15000+600000
+ 34536 strings out of 476334
+ 668627 string characters out of 5788444
+ 1860382 words of memory out of 5000000
+ 54335 multiletter control sequences out of 15000+600000
  577862 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,113p,1145b,5368s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1486,9 +1492,9 @@ Programs/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Users/Acer/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Acer/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Acer/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on GradProject.pdf (14 pages, 509667 bytes).
+Output written on GradProject.pdf (15 pages, 577124 bytes).
 PDF statistics:
- 320 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 163 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 330 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 
