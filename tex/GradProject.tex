@@ -14,7 +14,6 @@
     urlcolor=blue
     }
 \usepackage{amsfonts}
-
 \usepackage[style=apa,backend=biber]{biblatex}
 \usepackage{lipsum}
 \DeclareLanguageMapping{american}{american-apa}
@@ -49,29 +48,37 @@ Language is a fundamental aspect of human communication and one of the most comm
 
 The rest of the paper is organised as follows: In Section 2, autoencoders are discussed to understand the idea behind word embedding. After that, section 3 contains information about Word Embedding in general and several Word Embedding techniques are provided. Word Embedding techniques touched on in the paper are Term Frequency (TF), Inverse Document Frequency (IDF), Word2Vec, Global Vectors for Word Representation (GloVe), Bidirectional Encoder Representations from Transformers (BERT). This is followed by Section 4 which introduces the dataset The Divine Comedy by Dante Alighieri. After that, several Word Embedding models are applied to the dataset and the outputs of those models are analysed. Finally paper ends with some discussion and a conclusion in Section 6.
 
-\section{Autoencoders}
+\section{Word Embedding Techniques}
+Word Embedding is one of the most popular natural language processing techniques due to its vector representation of the words. As Agarwal stated, capturing semantic meaning of the words in a vector of text is the ambition of the word embedding techniques \cite(Agarwal, 2022). With respect to that, some of the most popular word embedding techniques will be studied in this section. Those techniques are TF, which counts rarity of words; IDF, which counts rarity of words; Skip-Gram method, which is used by Word2Vec; Continuous Bag of Words method, that also used by Word2Vec;  GloVe, which captures co-occurrence of words; and BERT, family of masked-language models introduced by Google.
 
-Inorder to understand word embedding, the term autoencoders must be discussed. Autoencoders are unsupervised learning techniques that compress the input into lower dimension and then reconstruct output from this. Autoencoders are mainly used in tasks like anomaly detection, feature detection, facial recognition, and word embedding. Typical structure of an autoencoder can be seen in \textbf{Figure 1}.\\
+\subsection{Term Frequency - Inverse Document Frequency}
+Term Frequency (TF) is a word embedding technique which counts the occurrence of the words in a document. TF can be shown as
 
-\begin{center}
+\begin{equation}
+TF(i) =   \frac{\log(Frequency(i,j))}{\log(TotalNumber(j))}.
+\end{equation}
 
-\includegraphics[scale=0.4]{autoencoding.jpg}
+where $Frequency(i,j)$ is the frequency of a word that occurred in a j word document and $TotalNumber(j)$ is the total number of the words in the document.
 
-\textbf{Figure 1:} Typical autoencoding structure, from Towards Data Science\\[2\baselineskip]
+On the other hand, Inverse Document Frequency (IDF) is practically the opposite of the TF method. In this method, algorithm relies on the information that gained from the words which are rarely used. IDF can be written as
 
-\end{center}
+\begin{equation}
+IDF (i) = \log (\frac{TotalNumber(j)}{Frequency(j,i)}).
+\end{equation}
 
-As it can be seen in Figure 1, an autoencoder reduces input into lower dimensional data by using neural networks, basically compressing them. After that, this reduced form code is used in mathematical operations and data model. Finally, autoencoder decodes the code to get an output with the same size as the input. There are several modifications of autoencoding like denoising autoencoders which applies random noise, sequence-to-sequence autoencoders which produces sequences of fixed sized vectors, or variational autoencoders. Even though these methods exists, two methods in word embedding come out: skip-gram and continuous bag of words.
+where $Frequency(i,j)$ is the frequency of a word that occurred in a j word document and $TotalNumber(j)$ is the total number of the words in the document.
 
-\subsubsection{Skip-Gram Algorithm}
+TF-IDF mainly shows the degree of relevancy of word i in the document j, while the main disadvantage of TF-IDF is it does not grasp contextual relationship between the words. As Kınık and Güran stated, TF-IDF does not capture semantic relationship between words, and accepts them as independent values (Kınık and Güran, 2021). Due to TF-IDF's lack of capturing semantic relationship of the words, TF-IDF mainly used to detect stop words.
 
-One of the model architectures is Skip-Gram Algorithm. Dive Into Deep Learning (n.d) states that a word can be used for generating its surrounding words in skip-gram model. For example, if the sentence "the man loves his son" is taken and "loves" is chosen as the center word, then skip-gram model considers the conditional probability for generating the words. This architecture can be seen in \textbf{Figure 2}. Due to this approach, each word has a two dimensional vector representations in skip-gram model. 
+\subsection{Skip-Gram Algorithm}
+
+Skip-Gram model is used by word embedding tasks of Word2Vec model, which will be discussed in following chapters. Dive Into Deep Learning (n.d) states that a word can be used for generating its surrounding words in skip-gram model. For example, if the sentence "the man loves his son" is taken and "loves" is chosen as the center word, then skip-gram model considers the conditional probability for generating the words. This architecture can be seen in \textbf{Figure 1}. Due to this approach, each word has a two dimensional vector representations in skip-gram model. 
 
 \begin{center}
 
 \includegraphics[scale=1]{skip-gram.png}
 
-\textbf{Figure 2:} Skip-Gram model architecture, from Dive Into Deep Learning\\[2\baselineskip]
+\textbf{Figure 1:} Skip-Gram model architecture, from Dive Into Deep Learning\\[2\baselineskip]
 
 \end{center}
 
@@ -105,15 +112,15 @@ And the gradient of center word $\mathbf{v}_c$ can be obtained as
 
 After this calculations, Dive Into Deep Learning states that we obtain center word vector $\mathbf{v}_i$ and context word vector $\mathbf{u}_i$ for index $i$ in the dictionary.
 
-\subsubsection{Continuous Bag of Words}
+\subsection{Continuous Bag of Words}
 
-The other variant is continuous bag of words (CBOW). The main difference between skip-gram and CBOW is instead of generating surrounding words respect to center word, CBOW generates center word with the help of surrounding words. If the same example "the man loves his son" is taken for CBOW model, instead of generating surrounding words based on center word "loves", the model generates center word "loves" from its surroundings. This architecture can be seen in \textbf{Figure 3}.
+The other method for word embedding in Word2Vec is continuous bag of words (CBOW). The main difference between skip-gram and CBOW is instead of generating surrounding words respect to center word, CBOW generates center word with the help of surrounding words. If the same example "the man loves his son" is taken for CBOW model, instead of generating surrounding words based on center word "loves", the model generates center word "loves" from its surroundings. This architecture can be seen in \textbf{Figure 2}.
 \\[2\baselineskip]
 
 \begin{center}
 \includegraphics[scale=1]{cbow.png}
 
-\textbf{Figure 3:} CBOW model architecture, from Dive Into Deep Learning\\[2\baselineskip]
+\textbf{Figure 2:} CBOW model architecture, from Dive Into Deep Learning\\[2\baselineskip]
 
 \end{center}
 
@@ -153,34 +160,8 @@ Through differentiation, gradient with respect to any cotext word vector $\mathb
 \frac{\partial log P(w_c| \mathcal{W}_o )}{\partial \mathbf{v}_{o_i}} = \frac{1}{2m}(\mathbf{u}_c - \sum_{j \in \mathcal{V}} P(w_j| \mathcal{W}_o \mathbf{u}_j)).
 \end{equation}
 
-Furthermore, autoencoders, skip-gram and CBOW methods are used to acquire the lower dimensional data for word embedding. Word embedding techniques are discussed in following section.
-
-\section{Word Embedding Techniques}
-Word Embedding is one of the most popular natural language processing techniques due to its vector representation of the words. As Agarwal stated, capturing semantic meaning of the words in a vector of text is the ambition of the word embedding techniques \cite(Agarwal, 2022). With respect to that, some of the most popular word embedding techniques will be studied in this section. Those techniques are TF, which counts rarity of words; IDF, which counts rarity of words; Word2Vec, which uses cosine similarity; GloVe, which captures co-occurrence of words; and BERT, family of masked-language models introduced by Google.
-
-\subsection{Term Frequency - Inverse Document Frequency}
-Term Frequency (TF) is a word embedding technique which counts the occurrence of the words in a document. TF can be shown as
-
-\begin{equation}
-TF(i) =   \frac{\log(Frequency(i,j))}{\log(TotalNumber(j))}.
-\end{equation}
-
-where $Frequency(i,j)$ is the frequency of a word that occurred in a j word document and $TotalNumber(j)$ is the total number of the words in the document.
-
-On the other hand, Inverse Document Frequency (IDF) is practically the opposite of the TF method. In this method, algorithm relies on the information that gained from the words which are rarely used. IDF can be written as
-
-\begin{equation}
-IDF (i) = \log (\frac{TotalNumber(j)}{Frequency(j,i)}).
-\end{equation}
-
-where $Frequency(i,j)$ is the frequency of a word that occurred in a j word document and $TotalNumber(j)$ is the total number of the words in the document.
-
-TF-IDF mainly shows the degree of relevancy of word i in the document j, while the main disadvantage of TF-IDF is it does not grasp contextual relationship between the words. As Kınık and Güran stated, TF-IDF does not capture semantic relationship between words, and accepts them as independent values \cite(Kınık and Güran,2021). Due to TF-IDF's lack of capturing semantic relationship of the words, TF-IDF mainly used to detect stop words.
-
-\subsection{Word2Vec}
-Word2Vec is a word embedding model that was published by researchers led by Tomáš Mikolov at Google in 2013. As stated in Gensim documentations (n.d.), words are embeded in lower-dimensional vector space by Work2Vec. In this vector space, vectors which have similarity of context between them are close to each other while words that have different meanings are distant to each other. After that, Word2Vec uses cosine similarity metric to measure similarity of the words. If cosine value of two words is 0, then words do not hold similarity. If cosine value of two words  is 1, then the words are overlapping. Due to that, Word2Vec model is mostly used in semantic analysis. On the other hand, the main disadvantage of Word2Vec model is that it can not handle out of vocabulary words well. The words not presenting in training data is called out of vocabulary words. As Chandran stated (2020), a random vector representation is assigned for out of vocabulary words by Word2Vec, and they can be not optimal.
-
 \subsection{Global Vectors for Word Representation}
+
 Global Vectors for Word Representation (GloVe) is an unsupervised learning algorithm that developed by scientist led by Jeffery Pennington in Stanford University. Unlike Word2Vec, GloVe captures global contextual information of words by calculating a global word-word co-occurrence matrix. For example, in a large corpus, the word "liquid" more likely to co-occur with "water" than "ice", but word "solid" more likely to co-occur with "ice" than "steam". According to Agarwal, only local context of words is captured by Word2Vec (Agarwal, 2022). On the other hand, entire corpus is considered by GloVe and a large matrix that can capture co-occurrence of words within the corpus is created.
 \\[2\baselineskip]
 
@@ -220,7 +201,7 @@ On the other hand, context-sensitive function $f(x,c(x))$ is dependent to both t
 
 When it comes to task-specific and task-agnostic representation, task-specific representation is when a model is optimized to a specific task, while a task-agnostic representation is when model is independent from a task based architecture. For instance, ELMo is an task-specific solution while it is not necessary to create specific architecture for each NLP task. The Generative Pre-Training  (GPT) model is a context-sensitive, task-agnostic representation. However, according to Dive Into Deep Learning, GPT only look left to right because of autoregressive nature of natural languages. For example, the sentences "A crane is flying." and "A crane is crashed." is taken, because of word "crane" being sensitive to context in its left, GPT will return the same representation of "crane".
 
-Both ELMo and GPT fails in some cases. According to Dive Into Deep Learning, combination of both representations BERT, encodes context bidirectionally and requires minimal architecture changes for a wide range of natural language processing tasks. Differences between ELMo, GPT and BERT can be seen in \textbf{Figure 4}.
+Both ELMo and GPT fails in some cases. According to Dive Into Deep Learning (n.d.), combination of both representations BERT, encodes context bidirectionally and requires minimal architecture changes for a wide range of natural language processing tasks. Differences between ELMo, GPT and BERT can be seen in \textbf{Figure 4}.
 \\[2\baselineskip]
 
 \begin{center}
@@ -229,13 +210,35 @@ Both ELMo and GPT fails in some cases. According to Dive Into Deep Learning, com
 \textbf{Figure 4:} Difference between ELMo, GPT, and BERT, from Dive Into Deep Learning\\[2\baselineskip]
 \end{center}
 
-As Dive Into Deep Learning states, by using pretrained transformer encoder, any token based on its bidirectional context can be represented by BERT. Furthermore, BERT is similar to GPT in two aspect during supervised learning of downstream tasks.
+Furthermore, Dive Into Deep Learning continues by using pretrained transformer encoder, any token based on its bidirectional context can be represented by BERT. Furthermore, BERT is similar to GPT in two aspect during supervised learning of downstream tasks.
 
 1. BERT representations will be fed into an added output layer with minimal changes to the model architecture. 
 
 2. while the additional output layer will be trained from scratch, all the parameters of the pretrained transformer encoder are fine-tuned.
 
 Finally, Agarwal states that there are two variants of BERT: BERT-Base and BERT-Large. While BERT-Base has 110 million parameters, BERT-Large has 340 million parameters.
+
+\section{Word2Vec}
+
+Word2Vec is a word embedding model that was published by researchers led by Tomáš Mikolov at Google in 2013. As stated in Gensim documentations (n.d.), words are embeded in lower-dimensional vector space by Work2Vec. The method used to compress data into lower dimension is called autoencoding. After that, in this vector space, vectors which have similarity of context between them are close to each other while words that have different meanings are distant to each other. Word2Vec Model calculates the cosine similarity of those words in order to find relations between them. Due to that, the term autoencoders are discussed and it is followed by discussion of Word2Vec model in this section.
+
+\subsection{Autoencoders}
+
+In order to understand word embedding, the term autoencoders must be discussed. Autoencoders are unsupervised learning techniques that compress the input into lower dimension and then reconstruct output from this. Autoencoders are mainly used in tasks like anomaly detection, feature detection, facial recognition, and word embedding. Typical structure of an autoencoder can be seen in \textbf{Figure 5}.\\
+
+\begin{center}
+
+\includegraphics[scale=0.4]{autoencoding.jpg}
+
+\textbf{Figure 5:} Typical autoencoding structure, from Towards Data Science\\[2\baselineskip]
+
+\end{center}
+
+As it can be seen in Figure 1, an autoencoder reduces input into lower dimensional data by using neural networks, basically compressing them. After that, this reduced form code is used in mathematical operations and data model. Finally, autoencoder decodes the code to get an output with the same size as the input. There are several modifications of autoencoding like denoising autoencoders which applies random noise, sequence-to-sequence autoencoders which produces sequences of fixed sized vectors, or variational autoencoders.
+
+\subsection{Word2Vec}
+
+After obtaining vectors, Word2Vec uses cosine similarity metric to measure similarity of the words. Due to that, this architecture is similar to autoencoders, where there is encoder and decoder layers. If cosine value of two words is 0, then words do not hold similarity. If cosine value of two words  is 1, then the words are overlapping. Due to that, Word2Vec model is mostly used in semantic analysis. On the other hand, the main disadvantage of Word2Vec model is that it can not handle out of vocabulary words well. The words not presenting in training data is called out of vocabulary words.  As Chandran stated (2020), a random vector representation is assigned for out of vocabulary words by Word2Vec, and they can be not optimal. Word2Vec constructs vectors with two methods: Skip-Gram and CBOW methods. Those two methods are discussed in previous chapters. Briefly, Skip-Gram generates surrounding words by center word, while CBOW does the opposite: generating the center word by surrounding words. In following application section, both Skip-Gram and CBOW models are used.
 
 \section{Application}
 
@@ -249,24 +252,30 @@ The Divine Comedy is chosen for this paper due to several reasons. Firstly and m
 
 For this paper, versions of The Divine Comedy in different languages are used and the data is taken from \href{https://www.gutenberg.org/}{Project Gutenberg}. Six different versions of The Divine Comedy in different languages are used and those languages are \href{https://www.gutenberg.org/cache/epub/39181/pg39181-images.html}{Dutch}, \href{https://www.gutenberg.org/cache/epub/1004/pg1004-images.html}{English}, \href{https://www.gutenberg.org/cache/epub/12546/pg12546.html}{Finnish}, \href{https://www.gutenberg.org/cache/epub/8085/pg8085.html}{German}, \href{https://www.gutenberg.org/cache/epub/1000/pg1000-images.html}{Italian}, and \href{https://www.gutenberg.org/cache/epub/57303/pg57303-images.html}{Spanish}.
 
-\subsection{Preparation of the Dataset}
+\subsection{Application}
 
-In this section, data is prepared for working in the models. Firstly, links of adaptaions are taken from Project Gutenberg. 
-
-\begin{center}
-
-\includegraphics[width=\textwidth]{languages.pdf}
-
-\end{center}
-
-After that, 
-
-\subsection{Skip-Gram Algorithm}
-
-\subsection{Continuous Bag of Words}
-
-\section{Analysis and Visualization}
 
 \section{Discussion}
 
+\newpage
+\begin{thebibliography}{7}
+\bibitem{article}
+Agarwal, N. (2022). \emph{The Ultimate Guide To Different Word Embedding Techniques In NLP}. KDnuggets. https://www.kdnuggets.com/2021/11/guide-word-embedding-techniques-nlp.html
+\bibitem{chandran}
+Chandran, S. (2020). \emph{Introduction to Text Representations for Language Processing — Part 2}. Towards Data Science. https://towardsdatascience.com/introduction-to-text-representations-for-language-processing-part-2-54fe6907868
+\bibitem{didl}
+Dive Into Deep Learning. (n.d.). \emph{The Skip Gram Model}. https://d2l.ai/chapter\_natural-language-processing-pretraining/word2vec.html\#the-skip-gram-model
+\bibitem{didl2}
+Dive Into Deep Learning. (n.d.). \emph{The Continuous Bag of Words (CBOW) Model}. https://d2l.ai/chapter\_natural-language-processing-pretraining/word2vec.html\#the-continuous-bag-of-words-cbow-model
+\bibitem{didl3}
+Dive Into Deep Learning. (n.d.). \emph{Bidirectional Encoder Representations from Transformers (BERT)}. https://d2l.ai/chapter\_natural-language-processing-pretraining/bert.html\#bidirectional-encoder-representations-from-transformers-bert
+\bibitem{gensim}
+Gensim. (n.d.). \emph{Introducing: the Word2Vec Model}.
+https://radimrehurek.com/gensim/auto\_examples/tutorials/run\_word2vec.html\#sphx-glr-auto-examples-tutorials-run-word2vec-py
+\bibitem{glove}
+Pennington, J. Socher R., Manning, C. D. (n.d.). \emph{GloVe: Global Vectors for Word Representation}. https://nlp.stanford.edu/projects/glove/
+\bibitem{article2}
+Kınık, D., Güran, A. (2021). TF-IDF ve Doc2Vec Tabanlı Türkçe Metin Sınıflandırma Sisteminin
+Başarım Değerinin Ardışık Kelime Grubu Tespiti ile Arttırılması, \emph{Avrupa Bilim ve Teknoloji Dergisi}, 21, 323-332.
+\end{thebibliography}
 \end{document}
