@@ -14944,7 +14944,7 @@ After that, most common 50 words are aligned between each other to be used in wo
 <pre>Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: [&#39;cls.predictions.decoder.weight&#39;, &#39;cls.predictions.transform.dense.weight&#39;, &#39;cls.predictions.transform.LayerNorm.weight&#39;, &#39;cls.predictions.bias&#39;, &#39;cls.predictions.transform.LayerNorm.bias&#39;, &#39;cls.seq_relationship.bias&#39;, &#39;cls.seq_relationship.weight&#39;, &#39;cls.predictions.transform.dense.bias&#39;]
 - This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
 - This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-2023-06-08 17:10:41,285 - simalign.simalign - INFO - Initialized the EmbeddingLoader with model: bert-base-multilingual-cased
+2023-06-08 19:01:14,761 - simalign.simalign - INFO - Initialized the EmbeddingLoader with model: bert-base-multilingual-cased
 </pre>
 </div>
 </div>
@@ -15280,6 +15280,7 @@ After creating skipgram dataframe, cosine similarity is calculated for the datas
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Figure 6: Dendogram Created by Skip-Gram"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15312,6 +15313,18 @@ jp-needs-light-background
 
 </div>
 
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Figure 6: Dendogram Created by Skip-Gram
+</pre>
+</div>
+</div>
+
 </div>
 
 </div>
@@ -15324,7 +15337,7 @@ jp-needs-light-background
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><span style="font-family: Times New Roman;font-size: 20px"> 
-As it can be seen in the dendogram, Finnish is clustered different from other 4 languages. This is caused by the fact that Finnish is not an Indo-European language. Finnish is an Uralic language, which is a language family that contains languages such as Hungarian and Estonian. Furthermore, Italian is also clustered different from other 3 languages. This is caused by the fact that Italian is a Romance language, which is a language family that contains languages such as Spanish and French. Finally, Dutch and English is clustered together instead of German. This is caused by the fact that Dutch and English are West Germanic languages, while German is a High Germanic language. Thanks to these results, it can be said that clustering by Skip-Gram algorithm is successful.</p>
+As it can be seen in the dendogram, Finnish is clustered different from other 4 languages. This is caused by the fact that Finnish is not an Indo-European language. Finnish is an Uralic language, which is a language family that contains languages such as Hungarian and Estonian. Furthermore, Italian is also clustered different from other 3 languages. This is caused by the fact that Italian is a Romance language (National Geographic, 2022), which is a language family that contains languages such as Spanish and French. Finally, Dutch and English is clustered together instead of German. This might be caused by the fact that German is High Germanic language.</p>
 
 </div>
 </div>
@@ -15393,6 +15406,7 @@ cbow dataframe is used to calculate cosine similarity with the function cosine_s
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'Language'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Figure 7: Dendogram Created by CBOW"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15425,6 +15439,18 @@ jp-needs-light-background
 
 </div>
 
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Figure 7: Dendogram Created by CBOW
+</pre>
+</div>
+</div>
+
 </div>
 
 </div>
@@ -15437,7 +15463,7 @@ jp-needs-light-background
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><span style="font-family: Times New Roman;font-size: 20px"> 
-In this dendogram, it can be seen that Dutch and English are clustered close to each other and German is the closest language to them. This relationship caused by the same reason as Skip-Gram dendogram: While Dutch and English are West Germanic languages, German is a High Germanic language. Furthermore, instead of being clustered with other Indo-European languages, Italian is clustered with Uralic language Finnish in this dendogram. This mistake might be caused by morphological similarity between Italian and Finnish. Instead of generating surrounding words from center word, CBOW model generates center word from surrounding words, and that might cause to morphological similarity of those two languages to effect clustering. Finally, it can be seen that except Italian, the clustering is same as Skip-Gram dendogram. Thanks to these results, it can be said that clustering by CBOW algorithm partially successful.</p>
+In this dendogram, it can be seen that Dutch and English are clustered close to each other and German is the closest language to them. This relationship caused by the same reason as Skip-Gram dendogram: While Dutch and English are West Germanic languages, German is a High Germanic language. Furthermore, instead of being clustered with other Indo-European languages, Italian is clustered with Uralic language Finnish in this dendogram. If Italian is excluded, the clustering is same as Skip-Gram dendogram, it can be said that clustering by CBOW algorithm partially successful.</p>
 
 </div>
 </div>
