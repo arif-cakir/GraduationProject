@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.8)  8 JUN 2023 20:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.8)  9 JUN 2023 00:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1392,32 +1392,26 @@ Package pdftex.def Info: skip-gram.png  used on input line 77.
 (pdftex.def)             Requested size: 280.04555pt x 183.68578pt.
  [5{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
 c}{C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc
-} <./skip-gram.png>]
-<cbow.png, id=125, 280.04625pt x 183.68625pt>
+} <./skip-gram.png>] [6]
+<cbow.png, id=133, 280.04625pt x 183.68625pt>
 File: cbow.png Graphic file (type png)
 <use cbow.png>
 Package pdftex.def Info: cbow.png  used on input line 118.
 (pdftex.def)             Requested size: 280.04555pt x 183.68578pt.
- [6]
-Underfull \vbox (badness 1642) has occurred while \output is active []
-
  [7 <./cbow.png>]
 <city_zip.jpg, id=144, 72.27pt x 56.3706pt>
 File: city_zip.jpg Graphic file (type jpg)
 <use city_zip.jpg>
 Package pdftex.def Info: city_zip.jpg  used on input line 167.
 (pdftex.def)             Requested size: 216.80942pt x 169.11136pt.
-
-Underfull \vbox (badness 2119) has occurred while \output is active []
-
- [8]
-[9 <./city_zip.jpg>] [10]
+ [8] [9 <./city_zip.jpg>] [10]
 <elmo-gpt-bert.png, id=162, 575.14874pt x 369.38pt>
 File: elmo-gpt-bert.png Graphic file (type png)
 <use elmo-gpt-bert.png>
 Package pdftex.def Info: elmo-gpt-bert.png  used on input line 206.
 (pdftex.def)             Requested size: 345.0919pt x 221.6297pt.
- [11 <./elmo-gpt-bert.png>]
+
+[11 <./elmo-gpt-bert.png>]
 <autoencoding.jpg, id=168, 831.105pt x 659.46375pt>
 File: autoencoding.jpg Graphic file (type jpg)
 <use autoencoding.jpg>
@@ -1433,130 +1427,141 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <Application.pdf, id=184, 597.19106pt x 845.07718pt>
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf>
-Package pdftex.def Info: Application.pdf  used on input line 253.
+Package pdftex.def Info: Application.pdf  used on input line 251.
 (pdftex.def)             Requested size: 597.1896pt x 845.07512pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf>
-Package pdftex.def Info: Application.pdf  used on input line 253.
+Package pdftex.def Info: Application.pdf  used on input line 251.
 (pdftex.def)             Requested size: 597.1896pt x 845.07512pt.
 <Application.pdf, id=187, page=1, 597.19106pt x 845.07718pt>
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 1>
-Package pdftex.def Info: Application.pdf , page1 used on input line 253.
+Package pdftex.def Info: Application.pdf , page1 used on input line 251.
 (pdftex.def)             Requested size: 597.1896pt x 845.07512pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 1>
-Package pdftex.def Info: Application.pdf , page1 used on input line 253.
+Package pdftex.def Info: Application.pdf , page1 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
  [14]
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 1>
-Package pdftex.def Info: Application.pdf , page1 used on input line 253.
+Package pdftex.def Info: Application.pdf , page1 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 1>
-Package pdftex.def Info: Application.pdf , page1 used on input line 253.
+Package pdftex.def Info: Application.pdf , page1 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 1>
-Package pdftex.def Info: Application.pdf , page1 used on input line 253.
+Package pdftex.def Info: Application.pdf , page1 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
  [15 <./Application.pdf>]
-<Application.pdf, id=219, page=2, 597.19106pt x 845.07718pt>
+<Application.pdf, id=218, page=2, 597.19106pt x 845.07718pt>
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 2>
-Package pdftex.def Info: Application.pdf , page2 used on input line 253.
+Package pdftex.def Info: Application.pdf , page2 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 2>
-Package pdftex.def Info: Application.pdf , page2 used on input line 253.
+Package pdftex.def Info: Application.pdf , page2 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 2>
-Package pdftex.def Info: Application.pdf , page2 used on input line 253.
+Package pdftex.def Info: Application.pdf , page2 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
  [16 <./Application.pdf>]
-<Application.pdf, id=238, page=3, 597.19106pt x 845.07718pt>
+<Application.pdf, id=226, page=3, 597.19106pt x 845.07718pt>
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 3>
-Package pdftex.def Info: Application.pdf , page3 used on input line 253.
+Package pdftex.def Info: Application.pdf , page3 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 3>
-Package pdftex.def Info: Application.pdf , page3 used on input line 253.
+Package pdftex.def Info: Application.pdf , page3 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 3>
-Package pdftex.def Info: Application.pdf , page3 used on input line 253.
+Package pdftex.def Info: Application.pdf , page3 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
  [17 <./Application.pdf>]
-<Application.pdf, id=247, page=4, 597.19106pt x 845.07718pt>
+<Application.pdf, id=245, page=4, 597.19106pt x 845.07718pt>
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 4>
-Package pdftex.def Info: Application.pdf , page4 used on input line 253.
+Package pdftex.def Info: Application.pdf , page4 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 4>
-Package pdftex.def Info: Application.pdf , page4 used on input line 253.
+Package pdftex.def Info: Application.pdf , page4 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 4>
-Package pdftex.def Info: Application.pdf , page4 used on input line 253.
+Package pdftex.def Info: Application.pdf , page4 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
  [18 <./Application.pdf>]
-<Application.pdf, id=260, page=5, 597.19106pt x 845.07718pt>
+<Application.pdf, id=254, page=5, 597.19106pt x 845.07718pt>
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 5>
-Package pdftex.def Info: Application.pdf , page5 used on input line 253.
+Package pdftex.def Info: Application.pdf , page5 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 5>
-Package pdftex.def Info: Application.pdf , page5 used on input line 253.
+Package pdftex.def Info: Application.pdf , page5 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 5>
-Package pdftex.def Info: Application.pdf , page5 used on input line 253.
+Package pdftex.def Info: Application.pdf , page5 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
  [19 <./Application.pdf>]
-<Application.pdf, id=269, page=6, 597.19106pt x 845.07718pt>
+<Application.pdf, id=262, page=6, 597.19106pt x 845.07718pt>
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 6>
-Package pdftex.def Info: Application.pdf , page6 used on input line 253.
+Package pdftex.def Info: Application.pdf , page6 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 6>
-Package pdftex.def Info: Application.pdf , page6 used on input line 253.
+Package pdftex.def Info: Application.pdf , page6 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 6>
-Package pdftex.def Info: Application.pdf , page6 used on input line 253.
+Package pdftex.def Info: Application.pdf , page6 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
  [20 <./Application.pdf>]
-<Application.pdf, id=276, page=7, 597.19106pt x 845.07718pt>
+<Application.pdf, id=270, page=7, 597.19106pt x 845.07718pt>
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 7>
-Package pdftex.def Info: Application.pdf , page7 used on input line 253.
+Package pdftex.def Info: Application.pdf , page7 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 7>
-Package pdftex.def Info: Application.pdf , page7 used on input line 253.
+Package pdftex.def Info: Application.pdf , page7 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
 File: Application.pdf Graphic file (type pdf)
 <use Application.pdf, page 7>
-Package pdftex.def Info: Application.pdf , page7 used on input line 253.
+Package pdftex.def Info: Application.pdf , page7 used on input line 251.
 (pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
- [21 <./Application.pdf>] [22] [23]
-Overfull \hbox (1.54434pt too wide) in paragraph at lines 291--293
+ [21 <./Application.pdf>]
+<Application.pdf, id=278, page=8, 597.19106pt x 845.07718pt>
+File: Application.pdf Graphic file (type pdf)
+<use Application.pdf, page 8>
+Package pdftex.def Info: Application.pdf , page8 used on input line 251.
+(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
+File: Application.pdf Graphic file (type pdf)
+<use Application.pdf, page 8>
+Package pdftex.def Info: Application.pdf , page8 used on input line 251.
+(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
+File: Application.pdf Graphic file (type pdf)
+<use Application.pdf, page 8>
+Package pdftex.def Info: Application.pdf , page8 used on input line 251.
+(pdftex.def)             Requested size: 561.82442pt x 795.0303pt.
+ [22 <./Application.pdf>] [23] [24]
+Overfull \hbox (1.54434pt too wide) in paragraph at lines 289--291
 \T1/lmr/m/n/12 https://radimrehurek.com/gensim/auto_examples/tutorials/run_word
 2vec.html#sphx- 
  []
 
-AED endfloat: Processing end Figures and Tables [24] (GradProject.aux)
+AED endfloat: Processing end Figures and Tables [25] (GradProject.aux)
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `GradProject.out' has not changed.
 (rerunfilecheck)             Checksum: 025455AB9CFBE0DA42D4426D392912E0;2413.
@@ -1570,13 +1575,13 @@ Package logreq Info: Writing requests to 'GradProject.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34544 strings out of 476410
- 669365 string characters out of 5789586
- 1860845 words of memory out of 5000000
- 54246 multiletter control sequences out of 15000+600000
+ 34548 strings out of 476410
+ 669469 string characters out of 5789586
+ 1861845 words of memory out of 5000000
+ 54249 multiletter control sequences out of 15000+600000
  573591 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,113p,1124b,5368s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,113p,1154b,5368s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb
 ><C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb>
 <C:/Users/Acer/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><
@@ -1591,9 +1596,9 @@ ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Users/Acer/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Acer/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Acer/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on GradProject.pdf (24 pages, 715095 bytes).
+Output written on GradProject.pdf (25 pages, 705778 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 70 named destinations out of 1000 (max. 500000)
- 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 398 PDF objects out of 1000 (max. 8388607)
+ 71 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
